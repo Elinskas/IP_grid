@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая 3</title>
+    <style>
+        body {
+            background: #a8d5d8;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        header {
+            display: grid;
+            grid-auto-columns: 140px 1fr 140px;
+            grid-template-rows: 75px 45px;
+            gap: 18px 22px;
+            width: 90%;
+            max-width: 960px;
+        }
+
+        .logo,
+        .login {
+            background: #2e8b57;
+        }
+
+        .logo {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .login {
+            grid-row: 1;
+            grid-column: 3;
+        }
+
+        .search {
+            grid-row: 1;
+            grid-column: 2;
+            display: flex;
+        }
+
+        .search__input {
+            flex: 1;
+            border: 1px solid #000;
+            border-right: none;
+            padding: 0 18px;
+            font-size: 17px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .search__button {
+            background: #c0392b;
+            color: #fff;
+            border: 1px solid #000;
+            padding: 0 28px;
+            font-size: 16px;
+            font-family: inherit;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .search__button:hover {
+            background: #a93226;
+        }
+
+        .options {
+            grid-row: 2;
+            grid-column: 2;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+            gap: 18px;
+        }
+
+        .opions__button {
+            background: #2980b9;
+            color: #fff;
+            border: 1px solid #000;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .opions__button:hover {
+            background: #1f618d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo"></div>
+    <form class="search">
+        <input class="search__input" type="text" placeholder="Поиск">
+        <button class="search__button" type="submit">Найти</button>
+    </form>
+    <div class="options">
+        <button class="opions__button">1</button>
+        <button class="opions__button">2</button>
+        <button class="opions__button">3</button>
+        <button class="opions__button">4</button>
+    </div>
+    <div class="login"></div>
+    </header>
+</body>
+</html>
